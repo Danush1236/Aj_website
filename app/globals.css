@@ -120,6 +120,7 @@
   }
  
   /* ── HERO ── */
+  /* ── HERO ── */
   .hero {
     position: relative; min-height: 100vh;
     display: flex; align-items: center;
@@ -768,9 +769,77 @@
     }
     .hamburger { display: flex; }
     .close-btn span { background: var(--white); }
-    .hero-content { padding: 0 24px; padding-top: 80px; }
-    .hero h1 { font-size: 44px; }
-    .hero-stats { left: 24px; right: 24px; gap: 32px; flex-wrap: wrap; bottom: 40px; }
+    .hero {
+        display: flex;
+    flex-direction: column;  
+    align-items: flex-start; 
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 100px 0 32px;
+    overflow: hidden;
+  }
+
+  .hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transform: scale(1.2);
+}
+
+  .hero-content {
+   order: 1;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .hero-sub {
+    font-size: 14px;
+    margin-bottom: 22px;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-stats {
+    order: 3;   
+    position: relative;  
+    margin-top: 28px;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+
+  .hero-stat-num {
+    font-size: 28px;
+  }
+
+  .hero-stat-label {
+    font-size: 10px;
+  }
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
     .about-accent-card { right: 0; bottom: -20px; }
     .services-grid { grid-template-columns: 1fr 1fr; }
